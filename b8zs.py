@@ -46,8 +46,8 @@ def plot_sequences(original_sequence, encoded_sequence, title):
     ax[0].grid(True)
 
     # Plot da sequência codificada (mantendo step para codificação)
-    ax[1].step(range(len(encoded_sequence)), encoded_sequence, where='post', label='Sequência Codificada (Pseudoternary)', color='orange')
-    ax[1].set_title('Sequência Codificada (Pseudoternary)')
+    ax[1].step(range(len(encoded_sequence)), encoded_sequence, where='post', label='Sequência Codificada (B8ZS)', color='orange')
+    ax[1].set_title('Sequência Codificada (B8ZS)')
     ax[1].set_ylim(-1.1, 1.1)
     ax[1].set_xlim(0, len(encoded_sequence)-1)
     ax[1].grid(True)
@@ -65,10 +65,10 @@ bit_sequence_2 = "1110100101000010"
 bit_sequence_1_list = [int(bit) for bit in bit_sequence_1]
 bit_sequence_2_list = [int(bit) for bit in bit_sequence_2]
 
-# Codifica as sequências usando Pseudoternary
+# Codifica as sequências usando B8ZS
 encoded_sequence_1 = b8zs_encoding(bit_sequence_1)
 encoded_sequence_2 = b8zs_encoding(bit_sequence_2)
 
 # Exibe os gráficos
-plot_sequences(bit_sequence_1_list, encoded_sequence_1, 'Codificação Pseudoternary - Sequência 1')
-plot_sequences(bit_sequence_2_list, encoded_sequence_2, 'Codificação Pseudoternary - Sequência 2')
+plot_sequences(bit_sequence_1_list, encoded_sequence_1, 'Codificação B8ZS - Sequência 1')
+plot_sequences(bit_sequence_2_list, encoded_sequence_2, 'Codificação B8ZS - Sequência 2')
